@@ -5,9 +5,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^books/$', 'books.views.index'),
-    url(r'^books/(?P<book_id>\d+)/$', 'books.views.bookDetail'),
-    url(r'^books/(?P<book_id>\d+)/posts/(?P<post_id>\d+)/$', 'books.views.postDetail'),
+	url(r'^books/$', 'libraryproject.views.index'),
+    url(r'^books/(?P<book_id>\d+)/$', 'libraryproject.views.bookDetail'),
+    url(r'^books/(?P<book_id>\d+)/posts/(?P<post_id>\d+)/$', 'libraryproject.views.postDetail'),
 	
 	
     # Examples:
