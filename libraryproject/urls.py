@@ -5,7 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^books/$', 'booklibrary.views.index'),
+	url(r'^books/$', 'books.views.index'),
     url(r'^books/(?P<book_id>\d+)/$', 'books.views.bookDetail'),
     url(r'^books/(?P<book_id>\d+)/posts/(?P<post_id>\d+)/$', 'books.views.postDetail'),
 	

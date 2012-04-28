@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from booklibrary.models import Book, Post
+from books.models import Book, Post
 from django.template import Context, loader
 from django.shortcuts import render_to_response
 

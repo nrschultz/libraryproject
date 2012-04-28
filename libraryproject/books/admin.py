@@ -1,4 +1,4 @@
-from booklibrary.models import Book, Post
+from books.models import Book, Post
 from django.contrib import admin
 
 class PostInline(admin.StackedInline):
