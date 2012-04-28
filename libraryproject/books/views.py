@@ -5,7 +5,8 @@ from django.shortcuts import render_to_response
 
 def index(request):
 	latest_book_list = Book.objects.all().order_by('-end_date')[:5]
-	return render_to_response('books/index.html', {'latest_book_list':latest_book_list,})
+	curr_book = Book.objects.all().order_by('-start_date')[0]
+	return render_to_response('books/index.html', {'latest_book_list':latest_book_list,'current_book': curr_book,})
 
 def bookDetail(request, book_id):
 	b = Book.objects.get(id=book_id)
